@@ -1,0 +1,7 @@
+base   jsdelivr
+author Jabasukuriputo Wang
+email  placeholder@example.com
+date   2020-07-30
+name   jsdelivr cdn for jquery
+desc   Load jquery from jsdelivr
+url    http://github.com/wfjsw/dokuwiki-jsdelivr
