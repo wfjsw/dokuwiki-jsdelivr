@@ -34,12 +34,13 @@ class action_plugin_jsdelivr extends DokuWiki_Action_Plugin
      */
     public function handle_confutil_cdn_select(Doku_Event $event, $param)
     {
-        global $conf;
-        $dev_string = $conf['compress'] ? '.min' : '';
+        $event->preventDefault();
+        // global $conf;
+        // $dev_string = $conf['compress'] ? '.min' : '';
 
         // add our jqm
         $event->data['src'][] = sprintf('https://cdn.jsdelivr.net/npm/jquery@%s/dist/jquery.min.js', $event->data['versions']['JQ_VERSION']);
-        $event->data['src'][] = sprintf('https://cdn.jsdelivr.net/npm/jquery-migrate@%s/dist/jquery-migrate.min.js', $event->data['versions']['JQM_VERSION']);
+        // $event->data['src'][] = sprintf('https://cdn.jsdelivr.net/npm/jquery-migrate@%s/dist/jquery-migrate.min.js', $event->data['versions']['JQM_VERSION']);
         $event->data['src'][] = sprintf('https://cdn.jsdelivr.net/npm/jquery-ui-dist@%s/jquery-ui.min.js', $event->data['versions']['JQUI_VERSION']);
     }
 }
